@@ -31,7 +31,7 @@ jobs:
         submodules: recursive
 
     # ⚠️ THE FOLLOWING LINE IS REQUIRED DURING THE ALPHA. DO NOT MODIFY. ⚠️
-    - uses: github/codeql-action/codeql/init@v1
+    - uses: github/codeql-action/init@v1
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
@@ -43,4 +43,4 @@ jobs:
     #   make release
 
     # ⚠️ THE FOLLOWING LINE IS REQUIRED DURING THE ALPHA. DO NOT MODIFY. ⚠️
-    - uses: github/codeql-action/codeql/finish@v1
+    - uses: github/codeql-action/finish@v1
