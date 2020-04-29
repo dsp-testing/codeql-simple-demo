@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void congratulateUser(const char *userName)
 {
@@ -7,6 +8,20 @@ void congratulateUser(const char *userName)
         sprintf(buffer, "Congratulations, %s!", userName);
         
         printf("%s\n", buffer);
+}
+void branchingFactor()
+{
+   int factor = atoi(getenv("BRANCHING_FACTOR"));
+   /* GOOD: Prevent overflow by checking the input */
+   /******* FIX *******
+   if (factor < 0 || factor > 1000) {
+       log("Factor out of range (%d)\n", factor);
+       return -1;
+   }
+   ******* FIX *******/
+   // This line can allocate too little memory if factor
+   // is very large.
+   char **root_node = (char **) malloc(factor * sizeof(char *));
 }
 
 int main() {
@@ -18,6 +33,8 @@ int main() {
    scanf("%s", aName);
    
    congratulateUser(aName);
-   
+        
+   branchingFactor();
+             
    return 0;
 }
