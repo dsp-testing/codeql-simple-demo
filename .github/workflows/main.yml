@@ -18,7 +18,7 @@ jobs:
 
     # ✏️ Define operating systems to run the job. macOS isn't supported for the
     #    alpha.
-    # 📚 https://git.io/JvXDG
+    # 📚 https://git.io/JvXDG 
     runs-on: ubuntu-latest
 
     steps:
